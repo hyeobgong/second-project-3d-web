@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>가방 쇼핑몰 - BagStore</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- 네비게이션 메뉴 -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">BagStore</div>
+            <ul class="nav-menu">
+                <li><a href="#home">홈</a></li>
+                <li><a href="#products">상품</a></li>
+                <li><a href="#recommended">추천</a></li>
+                <li><a href="#about">소개</a></li>
+                <li class="cart-icon">🛒</li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- MD 추천 상품 -->
+    <section class="md-recommended">
+        <div class="md-container">
+            <div class="md-content">
+                <div class="md-info">
+                    <h2>MD 추천</h2>
+                    <h3 id="bag-name">프리미엄 레더 백팩</h3>
+                    <p id="bag-desc">최고급 소재와 세련된 디자인이 결합된 프리미엄 백팩입니다.</p>
+                    <div class="price-section">
+                        <p class="price">₩ <span id="bag-price">189,000</span></p>
+                    </div>
+                    
+                    <!-- 색상 선택 -->
+                    <div class="color-selector">
+                        <label>색상 선택:</label>
+                        <div class="color-options">
+                            <button class="color-btn active" data-color="#1a1a1a" title="검정색">
+                                <span class="color-dot" style="background-color: #1a1a1a;"></span>
+                            </button>
+                            <button class="color-btn" data-color="#8B4513" title="갈색">
+                                <span class="color-dot" style="background-color: #8B4513;"></span>
+                            </button>
+                            <button class="color-btn" data-color="#C0C0C0" title="은색">
+                                <span class="color-dot" style="background-color: #C0C0C0;"></span>
+                            </button>
+                            <button class="color-btn" data-color="#808000" title="올리브">
+                                <span class="color-dot" style="background-color: #808000;"></span>
+                            </button>
+                            <button class="color-btn" data-color="#4B0082" title="남색">
+                                <span class="color-dot" style="background-color: #4B0082;"></span>
+                            </button>
+                        </div>
+                    </div>
+
+                    <button class="add-to-cart-btn">장바구니에 추가</button>
+                </div>
+
+                <!-- 3D 가방 쇼케이스 -->
+                <div class="md-3d-container" id="canvas-container">
+                    <canvas id="bagCanvas"></canvas>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 인기상품 목록 -->
+    <section class="popular-products" id="popular">
+        <div class="products-container">
+            <h2>인기상품</h2>
+            
+            <!-- 슬라이더 -->
+            <div class="slider-wrapper">
+                <button class="slider-btn prev-btn">❮</button>
+                
+                <div class="products-slider">
+                    <div class="products-track" id="productsTrack">
+                        <!-- 상품들이 여기에 동적으로 추가됨 -->
+                    </div>
+                </div>
+                
+                <button class="slider-btn next-btn">❯</button>
+            </div>
+
+            <!-- 더보기 버튼 -->
+            <div class="view-more-container">
+                <button class="view-more-btn">더보기</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Three.js 라이브러리 -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    
+    <!-- 메인 스크립트 -->
+    <script src="script.js"></script>
+</body>
+</html>
