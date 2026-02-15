@@ -1,0 +1,20 @@
+# 디렉토리
+node_modules/
+dist/
+build/
+
+# OS 파일
+.DS_Store
+Thumbs.db
+.env
+.env.local
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# 로그
+*.log
+npm-debug.log*
